@@ -1,0 +1,11 @@
+<div class="container">
+  <button (click)="decrement()"
+          class="btn btn-sm btn-primary">-</button>
+  <div class="counterNumber">
+    {{current$ | async}}</div>
+  <button (click)="increment()"
+          class="btn btn-sm btn-primary">+</button>
+  <button *ngIf="(current$ | async) != 0"
+          (click)="reset()"
+          class="btn btn-sm btn-primary">Reset</button>
+</div>

@@ -1,0 +1,17 @@
+.container {
+  margin-top: 10px;
+}
+
+.btn {
+  margin: 5px;
+  width: 50px;
+  min-height: 30px;
+}
+
+.counterNumber {
+  text-align: center;
+  min-width: 100px;
+  min-height: 30px;
+  border: thin solid blue;
+  display: inline-block;
+}
