@@ -1,6 +1,5 @@
 {
   "workbench.colorCustomizations": {
-    "activityBar.activeBorder": "#ee90bb",
     "activityBar.foreground": "#e7e7e7",
     "activityBar.inactiveForeground": "#e7e7e799",
     "activityBarBadge.background": "#ee90bb",
@@ -11,9 +10,10 @@
     "titleBar.activeForeground": "#e7e7e7",
     "titleBar.inactiveBackground": "#1857a499",
     "titleBar.inactiveForeground": "#e7e7e799",
-    "activityBar.activeBackground": "#1f6fd0",
-    "activityBar.background": "#1f6fd0",
-    "titleBar.activeBackground": "#1857a4"
+    // "activityBar.activeBackground": "#1f6fd0",
+    // "activityBar.activeBorder": "#ee90bb",
+    // "activityBar.background": "#1f6fd0",
+    // "titleBar.activeBackground": "#1857a4"
   },
   "docker.commands.run": "docker run -d ${exposedPorts} ${tag}",
   "peacock.color": "#1857a4",
@@ -31,7 +31,7 @@
   "files.autoSave": "onFocusChange",
   "typescript.check.npmIsInstalled": true,
   "editor.snippetSuggestions": "top",
-  "workbench.editor.labelFormat": "medium",
+  "workbench.editor.labelFormat": "short",
   "editor.lineHeight": 28,
   "editor.minimap.enabled": false,
   "window.zoomLevel": 0,

@@ -5,7 +5,9 @@
     {{current$ | async}}</div>
   <button (click)="increment()"
           class="btn btn-sm btn-primary">+</button>
-  <button *ngIf="(current$ | async) != 0"
+  <button *ngIf="this.resetDisabled$ | async"
           (click)="reset()"
           class="btn btn-sm btn-primary">Reset</button>
 </div>
+
+<app-counter-count-by></app-counter-count-by>

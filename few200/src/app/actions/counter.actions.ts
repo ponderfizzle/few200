@@ -1,4 +1,4 @@
-import { createAction } from '@ngrx/store';
+import { createAction, props } from '@ngrx/store';
 
 
 
@@ -13,3 +13,11 @@ export const countDecremented = createAction(
 export const countReset = createAction(
   'reset'
 )
+
+export const counterCountBySet = createAction('[app counter] count by', props<{ by: number }>())
+
+export const loadCountBy = createAction(
+  '[app counter] load saved count by'
+);
+
+

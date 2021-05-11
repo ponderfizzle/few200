@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { AppState } from 'src/app/reducers';
+import { AppState, selectCounterCurrentValue, selectCounterResetButtonDisabled } from 'src/app/reducers';
 import * as actions from '../../actions/counter.actions';
 
 @Component({
@@ -11,11 +11,14 @@ import * as actions from '../../actions/counter.actions';
 })
 export class CounterComponent implements OnInit {
   current$: Observable<number>;
+  resetDisabled$: Observable<boolean>;
 
   constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
-    this.current$ = this.store.select(s => s.counter.current) as Observable<number>;
+    // this.current$ = this.store.select(s => s.counter.current) as Observable<number>;
+    this.current$ = this.store.select(selectCounterCurrentValue);
+    this.resetDisabled$ = this.store.select(selectCounterResetButtonDisabled)
   }
 
   increment() {
@@ -29,5 +32,8 @@ export class CounterComponent implements OnInit {
   reset() {
     this.store.dispatch(actions.countReset());
   }
-
 }
+
+// function getCurrent(state: AppState) {
+//   return state.counter.current;
+// }
