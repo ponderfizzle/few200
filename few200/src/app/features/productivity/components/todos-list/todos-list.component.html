@@ -1,1 +1,5 @@
-<p>todos-list works!</p>
+<app-todo-list-summary [summary]="(model$ | async).summary"></app-todo-list-summary>
+
+<ng-container *ngFor="let item of (model$ | async)?.list">
+  <app-todo-list-item [todoItem]="item"></app-todo-list-item>
+</ng-container>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoListModel } from './models';
 
 @Component({
   selector: 'app-productivity',
